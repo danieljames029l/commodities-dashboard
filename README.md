@@ -91,12 +91,13 @@ Visitors can change the date range, switch the crude leg between WTI and Brent,
 pick which spreads to show, download the data, read the SQL, or upload their
 own CSV in the same format.
 
-**Putting it online (free):**
-1. Create a **public** GitHub repo called `commodities-dashboard` and push this
-   folder. `.gitignore` already keeps `.env` and the chat folder out.
-2. Go to **share.streamlit.io**, sign in with GitHub, choose **Create app**,
-   then pick the repo, branch `main` and main file `app.py`. Click **Deploy**.
-3. You get a link like `https://<name>.streamlit.app` to put on your CV.
+**Live:** https://01a0fc68-68f6-6bba-f52c-0f1d74f16aae.share.connect.posit.cloud/
+
+It's hosted on Posit Connect Cloud (free), published from the public GitHub repo
+`danieljames029l/commodities-dashboard`, branch `main`, file `app.py`.
+Streamlit Community Cloud blocks connections from South Sudan IP addresses, so
+it couldn't be used.
 
 **Updating the data:** run `python load_prices.py`, then commit and push
-`data/prices.csv`. The live app picks up the new file automatically.
+`data/prices.csv`. Then republish in Posit Connect Cloud, unless it's set to
+republish automatically on each push.
